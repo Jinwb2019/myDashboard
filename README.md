@@ -14,5 +14,5 @@ Users are able to:
 
 ### Screenshot
 
-![Preview of the dashboard](./images/screenshot.png)
+![Preview of the dashboard](./images/screenshoot.png)
 
