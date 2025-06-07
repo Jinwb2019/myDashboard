@@ -1,6 +1,6 @@
 //initialize models
 const { src, dest, watch, series } = require('gulp');
-const sass = require('gulp-sass')(require('sass'));
+const sass = require('gulp-sass')(require('sass')); //updated
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
@@ -14,7 +14,7 @@ const browserSync = require('browser-sync').create();
 // sass task
 function scssTask() {
     return src('app/scss/style.scss', { sourcemaps: true })
-        .pipe(sass())
+        .pipe(sass().on('error', sass.logError))
         .pipe(postcss([autoprefixer(), cssnano()]))
         .pipe(dest('dist', { sourcemaps: '.' }))
 }
